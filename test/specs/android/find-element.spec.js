@@ -1,5 +1,5 @@
 describe('Find Element Test',()=>{
-    xit('find element test',async()=>{
+    it('find element test',async()=>{
      const appOption =await $('~App')
      await appOption.click()
      const assActionbar=await $('~Action Bar')
@@ -21,7 +21,7 @@ describe('Find Element Test',()=>{
         const expassion = await $('//android.widget.TextView')
         expect(expassion).toHaveText("You selected: 1 , Command two")
 })
-xit('uiautomator',async()=>{
+it('uiautomator',async()=>{
        const appOption =await $('~App')
      await appOption.click()
     await $('android=new UiSelector().textContains("Alert")').click()

@@ -1,5 +1,6 @@
 const path = require ('path')
-const { config } = require('./wdio.conf')
+import { config } from '../wdio.conf.js';
+
   
 config.port = 4723,
 
@@ -17,4 +18,4 @@ config.capabilities=[ {
         "noReset": true
     }]    
 
-exports.config=config;
+export { config };
