@@ -1,12 +1,18 @@
 pipeline {
     agent any
 
-    stages {
+    // stages {
+        // stage('Clone') {
+        //     steps {
+        //         git 'https://github.com/Kannatvr/project_appium.git'
+        //     }
+        // }
         stage('Clone') {
-            steps {
-                git 'https://github.com/Kannatvr/project_appium.git'
-            }
-        }
+    steps {
+        echo 'Repo already cloned by Jenkins. Skipping manual git clone.'
+    }
+}
+
 
         stage('Install Dependencies') {
             steps {
