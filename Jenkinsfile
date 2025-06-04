@@ -1,10 +1,18 @@
 pipeline {
     agent any
 
+    environment {
+        // Add Node and npm to the PATH so Jenkins can find them
+        PATH = "/usr/local/bin:${env.PATH}"
+    }
+
     stages {
-        stage('Clone') {
+        stage('Check Environment') {
             steps {
-                echo 'Repo already cloned by Jenkins. Skipping manual git clone.'
+                sh 'which node'
+                sh 'node -v'
+                sh 'which npm'
+                sh 'npm -v'
             }
         }
 
