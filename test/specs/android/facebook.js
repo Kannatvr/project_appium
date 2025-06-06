@@ -1,6 +1,6 @@
 describe('navigate Homescreen ',()=>{
     it('lanch facebook in chrome',async()=>{
-       // await driver.pressKeyCode(3)
+       await driver.pressKeyCode(3)
         await $('~Chrome').click()
        const textFiled=await $('//*[@resource-id="com.android.chrome:id/search_box_text"]')
        await textFiled.addValue('facebook.com')

@@ -9,7 +9,5 @@ describe('amazon lanch',()=>{
         await driver.pressKeyCode(3)
         await $('~Phone').click()
         await $('~key pad').click()
-       
-
     })
 })

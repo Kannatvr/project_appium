@@ -7,12 +7,14 @@ const config = {
     specs: [
         path.join(process.cwd(), 'test/specs/android/**/*.js')
     ],
+    
     capabilities: [{
         platformName: 'Android',
         'appium:deviceName': 'Pixel_4',
         'appium:platformVersion': '16.0',
         'appium:automationName': 'UiAutomator2',
         'appium:app': path.join(process.cwd(), 'app/android/ApiDemos-debug.apk'),
+        // 'appium:app': path.join(process.cwd(), 'app/android/ColorNote+Notepad.apk'),
         'appium:autoGrantPermissions': true
     }]
 };
